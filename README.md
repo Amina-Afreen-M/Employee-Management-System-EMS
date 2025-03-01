@@ -1,52 +1,54 @@
 # Employee Management System (EMS)
 
-A comprehensive employee management system built with Spring Boot and React, featuring role-based access control, employee management, department organization, leave management, and timesheet tracking.
+A full-stack Employee Management System built with **Spring Boot** and **React**, featuring **role-based access control**, employee management, department organization, leave tracking, and timesheet management.
 
 ## Features
 
-- **User Authentication & Authorization**
-  - Role-based access control (Admin, Manager, Employee)
-  - Secure JWT-based authentication
-  - Protected routes and API endpoints
+### 🔐 Authentication & Authorization
+- Role-based access control (Admin, Manager, Employee)
+- JWT-based authentication & authorization
+- Secure API endpoints with Spring Security
 
-- **Employee Management**
-  - Employee profiles with personal and professional information
-  - Employee status tracking (Active, Inactive, On Leave)
-  - Department assignment and transfer
-  - Reporting structure management
+### 👥 Employee Management
+- Create, update, and delete employee profiles
+- Assign employees to departments
+- Track employee status (Active, On Leave, Inactive)
 
-- **Department Management**
-  - Department creation and organization
-  - Department head assignment
-  - Employee allocation and tracking
+### 🏢 Department Management
+- Create and manage departments
+- Assign department heads
+- Track employee allocations
 
-- **Leave Management**
-  - Multiple leave types (Annual, Sick, Personal, etc.)
-  - Leave request submission and approval workflow
-  - Leave balance tracking
+### 🗓️ Leave Management
+- Apply for leave (Annual, Sick, Personal, etc.)
+- Approval workflow for managers
+- Leave balance tracking
 
-- **Timesheet Management**
-  - Daily time entry logging
-  - Project and task tracking
-  - Timesheet approval workflow
+### ⏳ Timesheet Management
+- Log daily work hours
+- Track project-based tasks
+- Manager approval workflow
 
-## Tech Stack
+---
+
+## 🛠️ Tech Stack
 
 ### Backend
 - Spring Boot 3.1.5
-- Spring Security with JWT
-- Spring Data JPA
-- PostgreSQL
+- Spring Security (JWT Authentication)
+- Spring Data JPA (PostgreSQL)
 - Maven
 
 ### Frontend
 - React with TypeScript
-- Chakra UI
-- React Router
-- Axios
-- Zod for form validation
+- Chakra UI (for UI components)
+- React Router (for navigation)
+- Axios (API communication)
+- Zod (form validation)
 
-## Setup Instructions
+---
+
+## ⚙️ Setup Instructions
 
 ### Prerequisites
 - Java 17
@@ -55,30 +57,47 @@ A comprehensive employee management system built with Spring Boot and React, fea
 
 ### Database Setup
 1. Create a PostgreSQL database named `ems_db`
-2. Update database credentials in `backend/src/main/resources/application.properties` if needed
+2. Update `backend/src/main/resources/application.properties` with credentials:
+   ```properties
+   spring.datasource.url=jdbc:postgresql://localhost:5432/ems_db
+   spring.datasource.username=your_db_user
+   spring.datasource.password=your_db_password
+   ```
 
 ### Backend Setup
-```bash
+```sh
 cd backend
 mvn clean install
 mvn spring-boot:run
 ```
 
 ### Frontend Setup
-```bash
+```sh
 cd frontend
 npm install
 npm run dev
 ```
 
-## API Documentation
+---
 
-The API documentation is available at `http://localhost:8080/swagger-ui.html` when running the backend server.
+## 📑 API Documentation
+API documentation is available at:  
+🔗 **[http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html)**
 
-## Contributing
+### Key API Endpoints
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| `POST` | `/api/auth/login` | User Login (JWT) |
+| `GET` | `/api/employees` | Get all employees |
+| `POST` | `/api/employees` | Create a new employee |
+| `PUT` | `/api/employees/{id}` | Update employee details |
+| `DELETE` | `/api/employees/{id}` | Remove an employee |
+| `POST` | `/api/leaves/apply` | Apply for leave |
+| `GET` | `/api/timesheets` | Get submitted timesheets |
 
-Please read our contributing guidelines before submitting pull requests.
+---
 
-## License
+## 📜 License
+This project is licensed under the **MIT License**. See the [LICENSE](./LICENSE) file for details.
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+---
