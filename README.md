@@ -85,15 +85,15 @@ API documentation is available at:
 🔗 **[http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html)**
 
 ### Key API Endpoints
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| `POST` | `/api/auth/login` | User Login (JWT) |
-| `GET` | `/api/employees` | Get all employees |
-| `POST` | `/api/employees` | Create a new employee |
-| `PUT` | `/api/employees/{id}` | Update employee details |
-| `DELETE` | `/api/employees/{id}` | Remove an employee |
-| `POST` | `/api/leaves/apply` | Apply for leave |
-| `GET` | `/api/timesheets` | Get submitted timesheets |
+| Method  | Endpoint              | Description               |
+|---------|-----------------------|---------------------------|
+| **POST**   | `/api/auth/login`     | User Login (JWT)         |
+| **GET**    | `/api/employees`      | Get all employees        |
+| **POST**   | `/api/employees`      | Create a new employee    |
+| **PUT**    | `/api/employees/{id}` | Update employee details  |
+| **DELETE** | `/api/employees/{id}` | Remove an employee       |
+| **POST**   | `/api/leaves/apply`   | Apply for leave          |
+| **GET**    | `/api/timesheets`     | Get submitted timesheets |
 
 ---
 
@@ -101,3 +101,4 @@ API documentation is available at:
 This project is licensed under the **MIT License**. See the [LICENSE](./LICENSE) file for details.
 
 ---
+
